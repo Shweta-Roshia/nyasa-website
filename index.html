@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyasa - Community Initiatives | IIT Gandhinagar</title>
+  <meta name="description" content="Nyasa — IIT Gandhinagar initiative supporting children of migrant construction workers with education, health camps, skill training and community outreach." />
+  <link rel="icon" href="/assets/favicon.png" />
+
+  <style>
+    /* Basic Reset */
+    :root{
+      --brand:#0b6e4f;
+      --accent:#f2c94c;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --maxwidth:1100px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#0f172a}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+
+    /* Layout */
+    .container{max-width:var(--maxwidth);margin:0 auto;padding:24px}
+    header{background:linear-gradient(90deg, rgba(11,110,79,0.06), rgba(11,110,79,0.03));position:sticky;top:0;backdrop-filter:saturate(120%) blur(6px);z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:48px;height:48px;border-radius:8px;object-fit:cover}
+    .brand h1{font-size:18px;margin:0}
+
+    nav ul{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+    .btn{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--brand);color:#fff;font-weight:600}
+    .secondary{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:8px 12px;border-radius:8px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
+    .hero h2{margin:0;font-size:28px;line-height:1.05}
+    .hero p{color:var(--muted);margin-top:12px}
+    .hero .kpis{display:flex;gap:12px;margin-top:18px}
+    .kpi{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 4px 14px rgba(15,23,42,0.04);min-width:110px;text-align:center}
+    .kpi strong{display:block;font-size:20px}
+
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(12,15,20,0.04)}
+
+    /* Sections */
+    section{padding:28px 0;border-bottom:1px dashed rgba(15,23,42,0.03)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    /* Programs list */
+    .program{display:flex;gap:12px;align-items:flex-start}
+    .program img{width:84px;height:64px;object-fit:cover;border-radius:8px}
+    .program h4{margin:0}
+    .muted{color:var(--muted)}
+
+    /* CTA */
+    .cta{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:18px;background:linear-gradient(90deg,#fff,#fbfff8);border-radius:12px}
+
+    footer{padding:24px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      nav ul{display:none}
+      .mobile-nav-toggle{display:inline-block}
+    }
+
+    /* mobile nav */
+    .mobile-nav-toggle{display:none;background:transparent;border:0;font-size:18px}
+    .mobile-menu{display:none;padding:12px 0}
+    .mobile-menu.open{display:block}
+
+    /* accessibility focus */
+    a:focus,button:focus{outline:3px solid rgba(11,110,79,0.15);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="https://initiatives.iitgn.ac.in/nyasa/Assets/Nyasa_logo.png" alt="Nyasa logo" />
+        <div>
+          <h1>Nyasa — IIT Gandhinagar</h1>
+          <div class="muted" style="font-size:12px">Community outreach · Education · Health · Skill training</div>
+        </div>
+      </div>
+
+      <div>
+        <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-menu" id="navToggle">☰</button>
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+    <div class="container mobile-menu" id="mobile-menu" hidden>
+      <a href="#about">About</a><br />
+      <a href="#programs">Programs</a><br />
+      <a href="#impact">Impact</a><br />
+      <a href="#volunteer">Volunteer</a><br />
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div>
+        <h2 id="hero-heading">Nyasa — empowering children & communities around IIT Gandhinagar since 2011</h2>
+        <p>We support children of migrant construction workers and nearby communities with education, health camps, mid‑day meals, skill training and a pathway to formal schooling.</p>
+
+        <div class="kpis" role="list" aria-label="Key figures">
+          <div class="kpi" role="listitem"><strong>4000+</strong><span class="muted">people / year</span></div>
+          <div class="kpi" role="listitem"><strong>800+</strong><span class="muted">children helped</span></div>
+          <div class="kpi" role="listitem"><strong>2011</strong><span class="muted">founded</span></div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px">
+          <a class="btn" href="#volunteer">Volunteer</a>
+          <a class="secondary" href="#contribute">Donate / Contribute</a>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Visual and quick links">
+        <img src="https://news.iitgn.ac.in/wp/wp-content/uploads/2022/06/Kids-showing-their-origami-craft-work-at-the-Nyasa-Summer-Camp-970x640.jpeg" alt="Children at Nyasa summer camp" style="border-radius:8px;margin-bottom:12px"/>
+        <h3 style="margin:0 0 6px 0">Upcoming: Summer Camp & Open‑air school</h3>
+        <p class="muted" style="font-size:14px;margin:0 0 12px">Arts · Games · Basic education · Computer sessions</p>
+        <a href="#programs">See programs</a>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <h3 id="about-heading">About Nyasa</h3>
+      <p class="muted">Nyasa (meaning: trust) began in 2011 to provide a safe, learning‑rich environment for children of migrant construction workers and the neighbouring communities. We combine practical support (meals, clothes, school supplies) with learning opportunities and community health outreach.</p>
+
+      <div style="margin-top:16px" class="grid-2">
+        <div class="card">
+          <h4>Mission</h4>
+          <p class="muted">Provide consistent education, health awareness and skills so that children and families have access to better opportunities and dignity.</p>
+        </div>
+        <div class="card">
+          <h4>Approach</h4>
+          <p class="muted">Holistic — we blend classroom learning, extracurricular exposure, regular health camps and targeted skill training for adults to create long‑term change.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs" aria-labelledby="programs-heading">
+      <h3 id="programs-heading">Programs & Activities</h3>
+      <div style="margin-top:12px" class="grid-3">
+        <article class="card program" aria-labelledby="prog-openair">
+          <img src="https://initiatives.iitgn.ac.in/nyasa/Assets/Activities/open_air_school.jpg" alt="Open air school" />
+          <div>
+            <h4 id="prog-openair">Open‑air school & Summer Camp</h4>
+            <p class="muted">Arts, origami, games, basic literacy and numeracy camps that keep children engaged and learning during holidays.</p>
+          </div>
+        </article>
+
+        <article class="card program" aria-labelledby="prog-health">
+          <img src="https://initiatives.iitgn.ac.in/nyasa/Assets/Activities/medical_camp.jpg" alt="Medical camp" />
+          <div>
+            <h4 id="prog-health">Sanjeevani Medical Camps</h4>
+            <p class="muted">Periodic outreach health camps offering free checkups, medicines, awareness sessions for women and children.</p>
+          </div>
+        </article>
+
+        <article class="card program" aria-labelledby="prog-umeed">
+          <img src="https://initiatives.iitgn.ac.in/nyasa/Assets/Activities/umeed.jpg" alt="Skill training" />
+          <div>
+            <h4 id="prog-umeed">Umeed — Skill Development</h4>
+            <p class="muted">Computer basics and English classes for contractual workers to improve employability.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" aria-labelledby="impact-heading">
+      <h3 id="impact-heading">Impact & Stories</h3>
+      <div style="margin-top:12px" class="grid-3">
+        <div class="card">
+          <h4>Numbers</h4>
+          <p class="muted">Reaching 4000+ people each year through combined programs and camps. Hundreds of children enrolled over the past decade.</p>
+        </div>
+        <div class="card">
+          <h4>Pathway to school</h4>
+          <p class="muted">We help children transition from our informal programs into formal schools, including support for uniforms, books and follow up.</p>
+        </div>
+        <div class="card">
+          <h4>Volunteer stories</h4>
+          <p class="muted">Students and faculty share experiences: from teaching a class to organising a medical camp — Nyasa is built by volunteers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTRIBUTE / CTA -->
+    <section id="contribute" aria-labelledby="contribute-heading">
+      <h3 id="contribute-heading">Support Nyasa</h3>
+      <div style="margin-top:12px" class="cta">
+        <div>
+          <strong>Donate or volunteer — every contribution helps.</strong>
+          <p class="muted" style="margin:6px 0 0">Donations are eligible under Section 80G (check local rules). We accept in‑kind contributions: clothes, stationery and food.</p>
+        </div>
+        <div style="display:flex;gap:8px">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="secondary" href="#volunteer">Volunteer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUNTEER -->
+    <section id="volunteer" aria-labelledby="volunteer-heading">
+      <h3 id="volunteer-heading">Volunteer with us</h3>
+      <p class="muted">Students, staff and external volunteers are welcome. Typical roles: teaching, organising activities, medical camp support, logistics and fundraising.</p>
+      <div style="margin-top:12px" class="card">
+        <h4>How to help</h4>
+        <ol class="muted">
+          <li>Write to the team (contact details below)</li>
+          <li>Attend an orientation session</li>
+          <li>Join a program slot (2–3 hours) or a long‑term commitment</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h3 id="contact-heading">Contact & Location</h3>
+      <div class="grid-2" style="margin-top:12px">
+        <div class="card">
+          <h4>Nyasa Team</h4>
+          <p class="muted">Email: <a href="mailto:nyasa@iitgn.ac.in">nyasa@iitgn.ac.in</a><br/>Phone: +91 79 XXXX XXXX (office)</p>
+
+          <h4 style="margin-top:12px">Mailing / Office</h4>
+          <p class="muted">Nyasa — IIT Gandhinagar campus<br/>Palaj, Gandhinagar, Gujarat, India</p>
+        </div>
+        <div class="card">
+          <h4>Quick contact</h4>
+          <form onsubmit="event.preventDefault(); alert('Thank you — your message has been recorded (demo).');">
+            <label class="muted">Name <br/><input type="text" name="name" required style="width:100%;padding:8px;border-radius:8px;border:1px solid #e6eef4;margin-top:6px;" /></label>
+            <label class="muted" style="display:block;margin-top:8px">Email <br/><input type="email" name="email" required style="width:100%;padding:8px;border-radius:8px;border:1px solid #e6eef4;margin-top:6px;" /></label>
+            <label class="muted" style="display:block;margin-top:8px">Message <br/><textarea name="message" rows="4" required style="width:100%;padding:8px;border-radius:8px;border:1px solid #e6eef4;margin-top:6px"></textarea></label>
+            <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" type="submit">Send</button><button class="secondary" type="reset">Reset</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="muted">© Nyasa — IIT Gandhinagar · <small>Founded 2011</small></div>
+        <div class="muted">Follow: <a href="#">Facebook</a> · <a href="#">Instagram</a> · <a href="#">YouTube</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if(navToggle){
+      navToggle.addEventListener('click', ()=>{
+        const isOpen = mobileMenu.classList.toggle('open');
+        mobileMenu.hidden = !isOpen;
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+
+    // Simple progressive enhancement: replace broken images with a neutral placeholder
+    window.addEventListener('error', function(e){
+      const el = e.target;
+      if(el && el.tagName === 'IMG'){
+        el.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240"><rect width="100%" height="100%" fill="%23e6eef4"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23707b86" font-family="Arial, sans-serif" font-size="18">Image</text></svg>';
+      }
+    }, true);
+  </script>
+</body>
+</html>
